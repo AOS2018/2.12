@@ -1,0 +1,43 @@
+//***************************************************************************************************
+//
+//Write a nested loop program creating an array list of three positions.  
+//The first loop terminates with a sentinel value of which user is prompted for input to continue of quit.   
+//Inside loop to enter in each position a prompted input of person's first name. 
+// After the inside loop, edit the second array location making its value "Rutgers".  Print the array's contents.
+
+import java.util.ArrayList; 
+import java.util.Scanner; 
+
+class test2.12
+{
+   public static void main(String[] args) // this my main method yet when i run it. it says no main medthod 
+   {
+      ArrayList<String>fnames=new ArrayList<String>(3);
+      Scanner names = new Scanner(System.in);
+   
+      String s= "";
+      char choice; 
+   
+       while (true)
+      {
+         for (int i=0;i<3; i++)
+         {
+            System.out.println("\n Enter person first name:");
+            
+            s = sc.next();
+            fnames.add(s);
+        }
+       
+        System.out.println("Acutaul List:" + fnames);
+        fnames.set(1,"Rutgers");
+       
+        System.out.println("\n Do you want to continue(y/n):"); 
+        choice=sc.next().toLowerCase().charAt(0); 
+        
+        fnames.clear(); 
+       
+        if(choice =='n')
+        break;
+      }
+    }
+ }
